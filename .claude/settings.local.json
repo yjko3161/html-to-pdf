@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd C:/dev/html_to_pdf && npm create vite@latest . -- --template react-ts 2>&1)",
+      "Bash(cd C:/dev/html_to_pdf && echo \"y\" | npm create vite@latest . -- --template react-ts 2>&1)",
+      "Bash(cd C:/dev/html_to_pdf && npx --yes create-vite@latest temp_init --template react-ts 2>&1)",
+      "Bash(cd C:/dev/html_to_pdf && npm install 2>&1)",
+      "Bash(cd C:/dev/html_to_pdf && npm install -D tailwindcss @tailwindcss/vite 2>&1)",
+      "Bash(cd C:/dev/html_to_pdf && npm install -D tailwindcss-animate class-variance-authority clsx tailwind-merge lucide-react @radix-ui/react-slot @radix-ui/react-scroll-area @radix-ui/react-separator @radix-ui/react-dialog @radix-ui/react-tooltip 2>&1)",
+      "Bash(cd C:/dev/html_to_pdf && npm install @uiw/react-codemirror @codemirror/lang-html html2pdf.js uuid 2>&1)",
+      "Bash(cd C:/dev/html_to_pdf && npm install -D @types/uuid 2>&1)",
+      "Bash(cd:*)",
+      "Bash(cd C:/dev/html_to_pdf && npx tsc --noEmit 2>&1)",
+      "Bash(cd C:/dev/html_to_pdf && npm run build 2>&1)",
+      "Bash(cd C:/dev/html_to_pdf && npm run dev 2>&1)",
+      "Bash(cd C:/dev/html_to_pdf && npx vite --host 0.0.0.0 2>&1)",
+      "Bash(cd C:/dev/html_to_pdf && node -e \"const h = require\\('html2pdf.js'\\); console.log\\(typeof h, typeof h.default, Object.keys\\(h\\).slice\\(0,5\\)\\)\" 2>&1)",
+      "Bash(cd C:/dev/html_to_pdf && npm uninstall html2pdf.js && npm install html2canvas jspdf 2>&1)",
+      "Bash(netstat -ano | grep -E \":517[0-9]\" | grep LISTEN 2>&1)",
+      "Bash(taskkill //F //PID 64920 && taskkill //F //PID 35668 && taskkill //F //PID 35256 && taskkill //F //PID 71808 2>&1)",
+      "Bash(curl:*)",
+      "Bash(cd C:/dev/html_to_pdf && rm -rf node_modules/.vite && npx vite --host 0.0.0.0 2>&1)",
+      "Bash(netstat -ano | grep \":5173\" | grep LISTEN 2>&1)",
+      "Bash(taskkill:*)",
+      "Bash(cd C:/dev/html_to_pdf && npm uninstall html2canvas 2>&1)",
+      "Bash(cd C:/dev/html_to_pdf && npm install html2canvas 2>&1)",
+      "Bash(cd C:/dev/html_to_pdf && node -e \"const pkg = require\\('./node_modules/jspdf/package.json'\\); console.log\\(pkg.peerDependencies, pkg.dependencies\\)\" 2>&1)"
+    ]
+  }
+}
