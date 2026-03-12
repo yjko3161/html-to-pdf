@@ -85,7 +85,30 @@ export async function downloadPdfFromHtml(
       }
     }
 
-    pdf.save(`${filename || "document"}.pdf`);
+    const pdfBlob = pdf.output("blob");
+    const safeName = `${filename || "document"}.pdf`;
+
+    if ("showSaveFilePicker" in window) {
+      try {
+        const handle = await (window as any).showSaveFilePicker({
+          suggestedName: safeName,
+          types: [
+            {
+              description: "PDF",
+              accept: { "application/pdf": [".pdf"] },
+            },
+          ],
+        });
+        const writable = await handle.createWritable();
+        await writable.write(pdfBlob);
+        await writable.close();
+      } catch (e: any) {
+        if (e?.name === "AbortError") return; // 사용자가 취소
+        pdf.save(safeName); // 폴백
+      }
+    } else {
+      pdf.save(safeName);
+    }
   } catch (err) {
     console.error("PDF 생성 실패:", err);
     alert("PDF 생성에 실패했습니다: " + String(err));
